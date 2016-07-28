@@ -2,7 +2,7 @@ var numberEl = document.getElementById('number');
 var numeralEl = document.getElementById('roman-numeral')
 
 function convertRoman() {
-  var num = numberEl.value.replace(/,/g, "");
+  var num = numberEl.value.replace(/\D+/g, "");
   var firstDigit = num.slice(-1);
   var secondDigit = num.slice(-2,-1);
   var thirdDigit = num.slice(-3,-2);
@@ -13,6 +13,7 @@ function convertRoman() {
   var romanNumeral = convSixthDigit(sixthDigit) + convFifthDigit(fifthDigit) + convFourthDigit(fourthDigit) + convThirdDigit(thirdDigit) + convSecondDigit(secondDigit) + convFirstDigit(firstDigit);
 
   numeralEl.innerHTML = romanNumeral;
+  numberEl.value = num;
 }
 
 function convFirstDigit(num) {
