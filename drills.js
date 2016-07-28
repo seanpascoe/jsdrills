@@ -86,21 +86,21 @@ function avgOfArray(arr) {
 document.getElementById('dr6').innerHTML = `The average of the numbers in "awesomeArray" (see drill 2) is ${avgOfArray(awesomeArray)}`;
 
 
-// Drill 7
+//Drill 7
 
-// (function fizzBuzz() {
-//   for(var i = 1; i<=100; i++) {
-//     if ( i % 3 === 0 && i % 5 === 0 ) {
-//       console.log('FizzBuzz');
-//     } else if ( i % 3 === 0 ) {
-//       console.log('Fizz');
-//     } else if ( i % 5 === 0 ) {
-//       console.log('Buzz');
-//     } else {
-//       console.log(i);
-//     }
-//   }
-// })();
+(function fizzBuzz() {
+  for(var i = 1; i<=100; i++) {
+    if ( i % 3 === 0 && i % 5 === 0 ) {
+      console.log('FizzBuzz');
+    } else if ( i % 3 === 0 ) {
+      console.log('Fizz');
+    } else if ( i % 5 === 0 ) {
+      console.log('Buzz');
+    } else {
+      console.log(i);
+    }
+  }
+})();
 
 document.getElementById('dr7').innerHTML = `See console!`;
 
