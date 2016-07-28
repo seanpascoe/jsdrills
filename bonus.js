@@ -2,7 +2,7 @@ var numberEl = document.getElementById('number');
 var numeralEl = document.getElementById('roman-numeral')
 
 function convertRoman() {
-  var num = numberEl.value;
+  var num = numberEl.value.replace(/,/g, "");
   var firstDigit = num.slice(-1);
   var secondDigit = num.slice(-2,-1);
   var thirdDigit = num.slice(-3,-2);
@@ -187,7 +187,7 @@ function convFifthDigit(num) {
         return "<span>XXX</span>";
         break;
       case 4:
-        return "M<span>XL</span>";
+        return "<span>XL</span>";
         break;
       case 5:
         return "<span>L</span>";
@@ -226,7 +226,7 @@ function convSixthDigit(num) {
         return "<span>CCC</span>";
         break;
       case 4:
-        return "M<span>CD</span>";
+        return "<span>CD</span>";
         break;
       case 5:
         return "<span>D</span>";
